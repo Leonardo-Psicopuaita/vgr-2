@@ -1,0 +1,172 @@
+/* Reset e estilos globais */
+body {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color:   #121212;
+    color: #00376e;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container principal */
+body > * {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos para parágrafos */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #b9b9b9;
+}
+
+/* Estilos do formulário */
+form {
+    background: #262626;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: 500;
+    color: #b9b9b9;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+  }
+
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+  }
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+input[type="password"]:focus {
+    border-color: #073669;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+input[type="date"]:focus {
+    border-color: #60adff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+
+/* Estilos dos botões */
+button, input[type="submit"] {
+    background-color: #1DB954;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 1rem;
+}
+
+
+button:hover, input[type="submit"]:hover {
+    background-color: #21984b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active, input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+button, input[type="reset"] {
+    background-color: #8301fc;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 1rem;
+}
+
+
+button:hover, input[type="reset"]:hover {
+    background-color: #7816d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active, input[type="submit"]:active {
+    transform: translateY(0);
+}
+/* Botão de voltar específico */
+a button {
+    background-color: #8301fc;
+    margin-top: 1rem;
+}
+
+a button:hover {
+    background-color:#7816d3;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    form {
+        padding: 1.5rem;
+    }
+    
+    input[type="text"] {
+        padding: 10px;
+    }
+
+
+}
+
+.logo img {
+    width: 20%;
+    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}

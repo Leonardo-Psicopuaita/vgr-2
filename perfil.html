@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="style4.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="container">
+    <!-- Cabeçalho -->
+    <main class="Cabeçalho">
+      <div class="logo">
+        <a href="index.html"><img src="poster/imagens fodas/logocortada.png" alt="Logo"></a>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Pesquisar jogos...">
+      </div>
+    </main>
+  <div class="profile-container">
+    <!-- Header do Perfil -->
+    <header class="profile-header">
+      <img src="Poster/Humpty_Dumpty.webp" alt="Foto de Perfil" class="profile-avatar" />
+      <div class="profile-info">
+        <h1 class="username">Davizao</h1>
+        <p class="bio">Eu gosto de battlefield e sou magro</p>
+        <div class="stats">
+          <div><strong>120</strong> seguidores</div>
+          <div><strong>32</strong> listas</div>
+          <div><strong>58</strong> reviews</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Atividades Recentes -->
+    <section class="section">
+      <h2>Atividades Recentes</h2>
+      <div class="card-list">
+        <div class="activity-card">
+            <img src="poster/imagens fodas/battlefield-6-reveal-trailer-thumbnail.jpg.adapt.crop191x100.628p.jpg" alt="Filme" />
+            <div class="card-info">
+              <h3>Battlefield</h3>
+              <p>Avaliado em ★★★★★</p>
+              <div class="extra-info">
+                <p><strong>Plataformas:</strong> PC, PS5, Xbox</p>
+                <p><strong>Descrição:</strong> Um shooter de guerra moderna com gráficos realistas e combates em larga escala.</p>
+              </div>
+            </div>
+          </div>
+
+        <div class="activity-card">
+          <img src="poster/imagens fodas/EGS_Blasphemous_TheGameKitchen_S3_2560x1440-f1a83630b91b3f128e8f9dd58f3f8eed.jfif" alt="Filme" />
+          <div class="card-info">
+            <h3>Blasphemous</h3>
+            <p>Avaliado em ★★☆☆☆</p>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <img src="poster/imagens fodas/71VFW8l7g5L.jpg" alt="Filme" />
+          <div class="card-info">
+            <h3>Ben 10</h3>
+            <p>Adicionado à lista "Favoritos"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+        <h2>Favoritos</h2>
+        <div class="card-list">
+          <div class="activity-card">
+            <img src="poster/imagens fodas/battlefield-6-reveal-trailer-thumbnail.jpg.adapt.crop191x100.628p.jpg" alt="Filme" />
+            <div class="card-info">
+              <h3>battlefield</h3>
+              <p>Avaliado em ★★★★★</p>
+            </div>
+          </div>
+  
+          <div class="activity-card">
+            <img src="poster/imagens fodas/71VFW8l7g5L.jpg" alt="Filme" />
+            <div class="card-info">
+              <h3>Ben 10</h3>
+              <p>Avaliado em ★★☆☆☆</p>
+            </div>
+          </div>
+  
+          <div class="activity-card">
+            <img src="Poster/imagens fodas/EGS_Blasphemous_TheGameKitchen_S3_2560x1440-f1a83630b91b3f128e8f9dd58f3f8eed.jfif" alt="Filme" />
+            <div class="card-info">
+              <h3>Blasphemous</h3>
+              <p>Adicionado à lista "Favoritos"</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  </div>
+</body>
+</html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const main = document.querySelector('main');
+    const header = document.querySelector('main');
+    const cards = document.querySelectorAll('.activity-card');
+    
+    function checkHeaderOverlap() {
+      let isOverCard = false;
+      
+      if (!header || cards.length === 0) return;
+      
+      const headerRect = header.getBoundingClientRect();
+      const headerBottom = headerRect.bottom;
+      
+      cards.forEach(card => {
+        const cardRect = card.getBoundingClientRect();
+        const cardTop = cardRect.top;
+        
+        // Verifica se o header está sobrepondo o card
+        if (headerBottom > cardTop && cardTop > 0) {
+          isOverCard = true;
+        }
+      });
+      
+      // Aplica ou remove a classe transparente no cabeçalho principal
+      if (main && isOverCard) {
+        main.classList.add('transparent');
+      } else if (main) {
+        main.classList.remove('transparent');
+      }
+    }
+    
+    // Verifica a sobreposição ao carregar e ao scrollar
+    if (window.innerWidth > 768) { // Só aplica em telas maiores
+      window.addEventListener('scroll', checkHeaderOverlap);
+      checkHeaderOverlap(); // Verifica inicialmente
+    }
+  });
+  </script>
