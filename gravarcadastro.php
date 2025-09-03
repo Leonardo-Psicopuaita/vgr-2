@@ -5,9 +5,10 @@
  $email = $_POST['email'];
  $senha = $_POST['senha'];
  $nasc = $_POST['nasc'];
+ $tel = $_POST['telefone'];
 
- $result = mysqli_query($conn, "INSERT INTO usuario (nome, email, senha, nasc)
-values ('$nome','$email','$senha','$nasc')");
+ $result = mysqli_query($conn, "INSERT INTO login(nome, email, senha, nasc, telefone)
+values ('$nome','$email','$senha','$nasc'   , '$tel')");
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -26,7 +27,7 @@ values ('$nome','$email','$senha','$nasc')");
                 <div><strong>E-mail:</strong> <?php echo htmlspecialchars($email); ?></div>
                 <div><strong>Senha:</strong> ********</div>
                 <div><strong>Data de Nascimento:</strong> <?php echo date("d/m/Y", strtotime($nasc)); ?></div>
-
+                <div><strong>Telefone:</strong> <?php echo htmlspecialchars($tel); ?></div>
             </div>
             <a href="index.html"><button> Voltar</button></a> <br>
         </div>   

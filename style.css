@@ -182,3 +182,58 @@ header.transparent {
   color: var(--muted-color);
   padding: 0 15px 15px 15px;
 }
+/* Estilo para o container de sugestões */
+.suggestions-container {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--card-bg);
+  border-radius: 0 0 10px 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1001;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.suggestions-container.active {
+  display: block;
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s;
+}
+
+.suggestion-item:hover {
+  background-color: rgba(29, 185, 84, 0.2);
+}
+
+.suggestion-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.suggestion-item .suggestion-info {
+  flex: 1;
+}
+
+.suggestion-item .suggestion-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.suggestion-item .suggestion-meta {
+  font-size: 0.8rem;
+  color: var(--muted-color);
+}

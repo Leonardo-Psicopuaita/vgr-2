@@ -24,6 +24,10 @@
 
     <label for="">Insira sua data de nascimento </label>
     <input type ="date" name="nasc" id=""><br>      
+    
+    <label for="">Insira seu telefone</label>
+    <input type ="text" name="telefone" id=""><br> 
+
 
     <input type="submit" name="" id="" value="Mandar informações" ><br>
     <input type="reset" name="" id="" value="Limpar"><br>
@@ -32,4 +36,5 @@
     <a href="index.html"><button> Voltar</button></a> <br>
 </body>
 </html>
+
 
