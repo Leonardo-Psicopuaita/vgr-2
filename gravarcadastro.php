@@ -9,6 +9,9 @@
 
  $result = mysqli_query($conn, "INSERT INTO login(nome, email, senha, nasc, telefone)
 values ('$nome','$email','$senha','$nasc'   , '$tel')");
+
+$stmt = $mysqli->prepare("INSERT INTO CountryLanguage VALUES (?, ?, ?, ?, ?)");
+$stmt->bind_param('ssssi', $nome, $email, $senha, $nasc, $tel);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
